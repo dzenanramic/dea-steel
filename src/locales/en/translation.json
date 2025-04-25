@@ -2,11 +2,14 @@
   "welcome": "Welcome to Dea Steel",
   "our_products": "Our Products",
   "about_us": "About Us",
+  "home": "Home",
   "title":"Dea Steel",
   "description":"Precision Engineering & Structural Steel Solutions",
   "contact_us":"Contact Us",
+  "contact":"Contact",
   "adress":"Address",
   "phone":"Phone",
+  "our_services":"We provide:",
   "email":"Email",
   "services":"Services",
   "office_hours":"Office Hours",
@@ -15,8 +18,8 @@
   "welding_services": "Welding Services",
   "custom_solutions": "Custom Solutions",
   "linkedin_text": "Connect with us on LinkedIn",
-  "mon_fri_hours": "Mon-Fri: 7:00 AM - 5:00 PM",
-  "sat_hours": "Sat: 8:00 AM - 12:00 PM",
+  "mon_fri_hours": "Mon-Fri: 7:00 AM - 4:00 PM",
+  "sat_hours": "Sat: 7:00 AM - 4:00 PM",
   "sun_hours": "Sun: Closed",
   "our_mission": "Our Mission",
   "mission_text": "At Dea Steel, we are committed to delivering excellence in steel fabrication and engineering solutions. Our mission is to provide innovative, high-quality steel products while maintaining the highest standards of safety and customer satisfaction.",
@@ -28,5 +31,23 @@
   "innovation_title": "Innovative Solutions",
   "innovation_text": "We utilize cutting-edge technology and innovative approaches to meet complex challenges.",
   "reliability_title": "Reliable Service",
-  "reliability_text": "Our commitment to timely delivery and professional service sets us apart in the industry."
+  "reliability_text": "Our commitment to timely delivery and professional service sets us apart in the industry.",
+  "products": {
+    "fences": "Fences",
+    "steel_constructions": "Steel Constructions",
+    "metal_staircases": "Metal Staircases",
+    "gates_barriers": "Gates & Barriers",
+    "metal_furniture": "Metal Furniture",
+    "metal_decorations": "Metal Decorations",
+    "fences_desc": "Custom designed fencing solutions for residential and commercial properties",
+    "steel_constructions_desc": "Industrial and commercial steel structures and frameworks",
+    "metal_staircases_desc": "Custom designed and fabricated metal staircases and railings",
+    "gates_barriers_desc": "Automated and manual gates, security barriers, and entrance solutions",
+    "metal_furniture_desc": "Custom metal furniture and fixtures for indoor and outdoor use",
+    "metal_decorations_desc": "Unique metal decorations for home and garden"
+  },
+  "footer": {
+    "all_rights_reserved": "All rights reserved.",
+    "website_by": "Website development and maintenance by"
+  }
 }

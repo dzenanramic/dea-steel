@@ -7,21 +7,23 @@ function About() {
 
   return (
     <Box sx={{ width: "100%", overflow: "hidden" }}>
-      {/* Hero Section - Modified to position title at bottom */}
+      {/* Hero Section - Modified for better image display */}
       <Box
         sx={{
           position: "relative",
-          minHeight: { xs: "50vh", md: "70vh" },
+          minHeight: { xs: "26.5vh", md: "70vh" },
           display: "flex",
-          alignItems: "flex-end", // Changed from center to flex-end
+          alignItems: "flex-end",
           justifyContent: "center",
-          background: `
-            linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
-            url('/team.jpg')
-          `,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          pb: { xs: 8, md: 12 }, // Added bottom padding
+          backgroundImage: `linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('/team.jpg')`,
+          backgroundSize: {
+            xs: "auto, 100% auto", // Gradient: auto, Image: full width on xs
+            md: "auto, cover", // Gradient: auto, Image: cover on md+
+          },
+          backgroundPosition: "center, center",
+          backgroundRepeat: "no-repeat, no-repeat",
+          backgroundColor: "black", // Fallback for empty space
+          pb: { xs: 8, md: 12 },
           px: 2,
         }}
       >
@@ -37,7 +39,7 @@ function About() {
             lineHeight: 1.2,
             maxWidth: "1200px",
             textShadow: "2px 2px 4px rgba(0,0,0,0.5)",
-            mb: { xs: 4, md: 6 }, // Added margin bottom
+            mb: { xs: 0, md: 8 },
           }}
         >
           {t("about_us")}

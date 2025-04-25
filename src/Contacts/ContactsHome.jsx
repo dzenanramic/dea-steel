@@ -54,11 +54,11 @@ function ContactHome() {
 
           <Box sx={{ display: "flex", flexDirection: "column", gap: "25px" }}>
             <ContactItem icon={<LocationOnIcon />} title={t("adress")}>
-              123 Industrial Way, Steel Valley, SV 12345
+              Kozaruša
             </ContactItem>
 
             <ContactItem icon={<PhoneIcon />} title={t("services")}>
-              +1 (800) 555-0199
+              +387 65 395 776
             </ContactItem>
 
             <ContactItem icon={<EmailIcon />} title={t("email")}>
@@ -103,7 +103,7 @@ function ContactHome() {
           }}
         >
           <iframe
-            src="https://maps.google.com/maps?q=steel+factory&output=embed"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d826.6034550151616!2d16.80415257787802!3d44.976644746481035!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4767353457e36d15%3A0xf0da43d0a21ba09!2sDEA%20Steel!5e1!3m2!1shr!2sba!4v1745591780214!5m2!1shr!2sba"
             width="100%"
             height="100%"
             style={{ border: 0 }}

@@ -1,53 +1,11 @@
 import React from "react";
-import { Box, ToggleButtonGroup, ToggleButton, Tooltip } from "@mui/material";
+import { Box } from "@mui/material";
 import { Typography, Button } from "@mui/material";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 
 function LandingPage() {
-  const { i18n, t } = useTranslation();
-
-  const changeLanguage = (lng) => {
-    i18n.changeLanguage(lng);
-  };
-
-  const toggleButtonStyles = (language) => ({
-    minWidth: 40,
-    width: 40,
-    height: 30,
-    padding: 0,
-    border: "none",
-    overflow: "hidden",
-    position: "relative",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    "&:after": {
-      content: '""',
-      position: "absolute",
-      inset: 0,
-      border:
-        i18n.language === language
-          ? "2px solid #fff"
-          : "1px solid rgba(255,255,255,0.3)",
-      borderRadius: 1,
-      transition: "all 0.2s ease",
-    },
-    "&:hover": {
-      transform: "scale(1.1)",
-      "&:after": {
-        borderColor: "#fff",
-        boxShadow: "0 2px 8px rgba(255,255,255,0.3)",
-      },
-    },
-    "&.Mui-selected": {
-      backgroundColor: "transparent",
-      "&:after": {
-        borderWidth: 2,
-        borderColor: "#fff",
-      },
-    },
-  });
+  const { t } = useTranslation();
 
   return (
     <Box
@@ -64,7 +22,7 @@ function LandingPage() {
         px: { xs: 1.5, md: 4 },
         py: { xs: 4, md: 8 },
         background: `
-          linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.95)),
+          linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.95)),
           url('/konstrukcija.jpg')
         `,
         backgroundSize: "cover",
@@ -73,7 +31,7 @@ function LandingPage() {
       }}
     >
       {/* Language Toggle */}
-      <Box
+      {/* <Box
         position="absolute"
         top={{ xs: 12, md: 20 }}
         right={{ xs: 8, md: 100 }}
@@ -116,7 +74,7 @@ function LandingPage() {
             </ToggleButton>
           </Tooltip>
         </ToggleButtonGroup>
-      </Box>
+      </Box> */}
 
       {/* Main Content */}
       <Box
@@ -156,36 +114,77 @@ function LandingPage() {
           {t("description")}
         </Typography>
 
-        <Button
-          component={Link}
-          to="/about"
+        <Box
           sx={{
-            px: { xs: 3, md: 6 },
-            py: { xs: 1, md: 1.5 },
-            textTransform: "uppercase",
-            fontFamily: "'Oswald', sans-serif",
-            fontSize: { xs: "0.875rem", md: "1.25rem" },
-            fontWeight: 600,
-            minWidth: { xs: "160px", md: "220px" },
-            color: "#fff",
-            background: "linear-gradient(45deg, #4682B4, #2F4F4F)",
-            border: "2px solid #B0C4DE",
-            borderRadius: 1,
-            transition: "all 0.3s ease-in-out",
-            "&:hover": {
-              background: "linear-gradient(45deg, #2F4F4F, #4682B4)",
-              borderColor: "#fff",
-              transform: "translateY(-3px)",
-              boxShadow: "0 6px 16px rgba(0,0,0,0.4)",
-            },
-            "&:focus": {
-              outline: "2px solid #fff",
-              outlineOffset: 4,
-            },
+            display: "flex",
+            gap: { xs: 2, md: 3 },
+            justifyContent: "center",
+            alignItems: "center",
+            flexWrap: "wrap",
           }}
         >
-          {t("about_us")}
-        </Button>
+          <Button
+            component={Link}
+            to="/about"
+            sx={{
+              px: { xs: 3, md: 6 },
+              py: { xs: 1, md: 1.5 },
+              textTransform: "uppercase",
+              fontFamily: "'Oswald', sans-serif",
+              fontSize: { xs: "0.875rem", md: "1.25rem" },
+              fontWeight: 600,
+              minWidth: { xs: "160px", md: "220px" },
+              color: "#fff",
+              background: "linear-gradient(45deg, #4682B4, #2F4F4F)",
+              border: "2px solid #B0C4DE",
+              borderRadius: 1,
+              transition: "all 0.3s ease-in-out",
+              "&:hover": {
+                background: "linear-gradient(45deg, #2F4F4F, #4682B4)",
+                borderColor: "#fff",
+                transform: "translateY(-3px)",
+                boxShadow: "0 6px 16px rgba(0,0,0,0.4)",
+              },
+              "&:focus": {
+                outline: "2px solid #fff",
+                outlineOffset: 4,
+              },
+            }}
+          >
+            {t("about_us")}
+          </Button>
+
+          <Button
+            component={Link}
+            to="/products"
+            sx={{
+              px: { xs: 3, md: 6 },
+              py: { xs: 1, md: 1.5 },
+              textTransform: "uppercase",
+              fontFamily: "'Oswald', sans-serif",
+              fontSize: { xs: "0.875rem", md: "1.25rem" },
+              fontWeight: 600,
+              minWidth: { xs: "160px", md: "220px" },
+              color: "#fff",
+              background: "linear-gradient(45deg, #2F4F4F, #4682B4)",
+              border: "2px solid #B0C4DE",
+              borderRadius: 1,
+              transition: "all 0.3s ease-in-out",
+              "&:hover": {
+                background: "linear-gradient(45deg, #4682B4, #2F4F4F)",
+                borderColor: "#fff",
+                transform: "translateY(-3px)",
+                boxShadow: "0 6px 16px rgba(0,0,0,0.4)",
+              },
+              "&:focus": {
+                outline: "2px solid #fff",
+                outlineOffset: 4,
+              },
+            }}
+          >
+            {t("our_products")}
+          </Button>
+        </Box>
       </Box>
     </Box>
   );

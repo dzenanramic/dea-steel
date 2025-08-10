@@ -1,11 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Box,
   Typography,
   Container,
   Card,
   CardMedia,
-  CardContent,
+  Dialog,
+  DialogContent,
 } from "@mui/material";
 import { useTranslation } from "react-i18next";
 
@@ -18,6 +19,19 @@ function SteelConstructions() {
     { id: 3, image: "/steel-construction3.jpg", title: "Steel Frameworks" },
     { id: 4, image: "/steel-construction4.jpg", title: "Custom Projects" },
   ];
+
+  const [open, setOpen] = useState(false);
+  const [selectedImage, setSelectedImage] = useState(null);
+
+  const handleOpen = (image) => {
+    setSelectedImage(image);
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+    setSelectedImage(null);
+  };
 
   return (
     <Box sx={{ bgcolor: "#1a1a1a", minHeight: "100vh", py: 8 }}>
@@ -78,15 +92,17 @@ function SteelConstructions() {
                   flexDirection: "column",
                   bgcolor: "#2a2a2a",
                   transition: "transform 0.3s ease-in-out",
+                  cursor: "pointer",
                   "&:hover": {
                     transform: "translateY(-8px)",
                   },
                 }}
+                onClick={() => handleOpen(item.image)}
               >
-                <Box sx={{ height: 240, overflow: "hidden" }}>
+                <Box sx={{ height: 400, overflow: "hidden" }}>
                   <CardMedia
                     component="img"
-                    height="240"
+                    height="400"
                     image={item.image}
                     alt={item.title}
                     sx={{
@@ -95,29 +111,39 @@ function SteelConstructions() {
                     }}
                   />
                 </Box>
-                <CardContent
-                  sx={{
-                    flexGrow: 1,
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                  }}
-                >
-                  <Typography
-                    variant="h6"
-                    sx={{
-                      color: "#fff",
-                      fontFamily: "'Roboto Condensed', sans-serif",
-                      textAlign: "center",
-                    }}
-                  >
-                    {item.title}
-                  </Typography>
-                </CardContent>
               </Card>
             </Box>
           ))}
         </Box>
+
+        {/* Image Dialog */}
+        <Dialog
+          open={open}
+          onClose={handleClose}
+          maxWidth="lg"
+          disableScrollLock
+          slotProps={{
+            backdrop: {
+              sx: { backgroundColor: "black" },
+            },
+          }}
+        >
+          <DialogContent sx={{ p: 0, bgcolor: "black" }}>
+            {selectedImage && (
+              <img
+                src={selectedImage}
+                alt="Steel Construction"
+                style={{
+                  width: "100%",
+                  height: "auto",
+                  display: "block",
+                  maxHeight: "90vh",
+                  objectFit: "contain",
+                }}
+              />
+            )}
+          </DialogContent>
+        </Dialog>
       </Container>
     </Box>
   );

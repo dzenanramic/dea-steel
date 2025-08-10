@@ -36,13 +36,6 @@ function Products() {
       path: "/products/staircases",
     },
     {
-      id: 4,
-      title: t("products.gates_barriers"),
-      image: "/gates.jpeg",
-      description: t("products.gates_barriers_desc"),
-      path: "/products/gates",
-    },
-    {
       id: 5,
       title: t("products.metal_furniture"),
       image: "/steel-furniture.jpg",
@@ -120,6 +113,7 @@ function Products() {
                 <Card
                   sx={{
                     height: 450,
+                    borderRadius: 2,
                     display: "flex",
                     flexDirection: "column",
                     bgcolor: "#2a2a2a",
@@ -129,7 +123,7 @@ function Products() {
                     },
                   }}
                 >
-                  <Box sx={{ height: 240, overflow: "hidden" }}>
+                  <Box sx={{ height: 340, overflow: "hidden" }}>
                     <CardMedia
                       component="img"
                       height="240"
@@ -146,7 +140,7 @@ function Products() {
                       flexGrow: 1,
                       display: "flex",
                       flexDirection: "column",
-                      height: 210, // Fixed height for content
+                      height: 160, // Fixed height for content
                     }}
                   >
                     <Typography

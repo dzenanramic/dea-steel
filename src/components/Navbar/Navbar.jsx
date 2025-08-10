@@ -30,8 +30,8 @@ function Navbar() {
   const navItems = [
     { title: t("home"), path: "/" },
     { title: t("about_us"), path: "/about" },
-    { title: t("services"), path: "/services" },
     { title: t("our_products"), path: "/products" },
+    { title: t("services"), path: "/services" },
     { title: t("contact"), path: "/kontakt" },
   ];
 

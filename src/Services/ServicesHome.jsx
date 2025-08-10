@@ -18,7 +18,7 @@ function ServicesHome() {
   const products = [
     { id: 1, image: "/structural-steel2.jpg", title: t("structural_steel") },
     { id: 2, image: "/metal-fabrication.jpg", title: t("metal_fabrication") },
-    { id: 3, image: "/steel-coils2.jpg", title: t("welding_services") },
+    { id: 3, image: "/welding.png", title: t("welding_services") },
     { id: 4, image: "/custom-solutions4.jpg", title: t("custom_solutions") },
   ];
   return (

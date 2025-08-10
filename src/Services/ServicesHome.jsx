@@ -3,14 +3,7 @@ import Box from "@mui/material/Box";
 import Card from "@mui/material/Card";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
-import { keyframes } from "@mui/system";
 import { useTranslation } from "react-i18next";
-
-const floatAnimation = keyframes`
-  0% { transform: translateY(0px); }
-  50% { transform: translateY(-5px); }
-  100% { transform: translateY(0px); }
-`;
 
 function ServicesHome() {
   const [hoveredCard, setHoveredCard] = React.useState(null);

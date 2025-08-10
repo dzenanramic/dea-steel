@@ -54,7 +54,7 @@ function ContactHome() {
 
           <Box sx={{ display: "flex", flexDirection: "column", gap: "25px" }}>
             <ContactItem icon={<LocationOnIcon />} title={t("adress")}>
-              Kozaruša
+              Kozaruša bb
             </ContactItem>
 
             <ContactItem icon={<PhoneIcon />} title={t("services")}>
@@ -62,21 +62,7 @@ function ContactHome() {
             </ContactItem>
 
             <ContactItem icon={<EmailIcon />} title={t("email")}>
-              info@steelworks.com
-            </ContactItem>
-
-            <ContactItem icon={<EmailIcon size="24px" />} title="LinkedIn">
-              <Typography
-                component="a"
-                href="#"
-                sx={{
-                  color: "#fff",
-                  textDecoration: "none",
-                  "&:hover": { textDecoration: "underline" },
-                }}
-              >
-                {t("linkedin_text", "Connect with us on LinkedIn")}
-              </Typography>
+              office.deasteel@gmail.com
             </ContactItem>
 
             <ContactItem icon={<ScheduleIcon />} title={t("office_hours")}>
